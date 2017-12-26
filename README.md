@@ -89,7 +89,7 @@ DMPROPERTIES ('index_column'='c2')
 1. Support a new format (*carbongraph*) for adjacent matrix for high performance graph traversal.
 2. Implement a RPC based distributed graph compute framework
 3. Support prefetch of data to leverage the advantage of carbongraph's format
-4. Integrate CarbonData with Apache Tinkerpop as a [**TinkerPop-enabled data system provider**](tinkerpop.apache.org/providers.html). Expose Gremlin language to user as counterpart of SQL in data warehouse domain.
+4. Integrate CarbonData with Apache Tinkerpop as a [**TinkerPop-enabled data system provider**](http://tinkerpop.apache.org/providers.html). Expose Gremlin language to user as counterpart of SQL in data warehouse domain.
 
 ## Segment Status
 
