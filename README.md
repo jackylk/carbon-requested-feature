@@ -1,4 +1,6 @@
-Priority:
+# This document collects all requirement for Apache CarbonData.
+
+
 
 | Priority level | Feature                                  |
 | -------------- | ---------------------------------------- |
