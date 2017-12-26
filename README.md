@@ -1,4 +1,4 @@
-# This document collects all requirement for Apache CarbonData.
+# This document collects requirements for Apache CarbonData
 
 
 
