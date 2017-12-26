@@ -105,3 +105,8 @@ Since carbon has pre-agg now, many query can transform group by into point query
 
 1. Support data retention policy, so that old data is automatically deleted
 2. Support pre-aggregate table loading in rollup manner to improve loading speed, like rollup to month table based on day table instead of fact table
+
+## Streaming Table
+
+1. Integrate with flink
+2. Integrate with kafka-connect
