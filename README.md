@@ -1,4 +1,4 @@
-#### S3 table
+## S3 table
 
 1. support basic table on S3: store carbondata files and metadata on S3, support loading, insert into, and query
 2. support pre-agg table on S3
