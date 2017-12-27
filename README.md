@@ -64,7 +64,7 @@ DMPROPERTIES ('index_column'='c2')
 
 ## Differnet kind of Datamap
 
-1. Support lucene datamap for text index
+1. Support lucene datamap for text index (it needs UDF pushdown to continue)
 2. Support R tree datamap for geospatial analytic
 3. Support cache table as datamap (repeated)
 
@@ -110,5 +110,10 @@ Since carbon has pre-agg now, many query can transform group by into point query
 
 ## Streaming Table
 
-1. Integrate with flink
-2. Integrate with kafka-connect
+1. Compaction: auto compact and close stream
+2. Integrate with flink
+3. Integrate with kafka-connect
+
+## Misc
+
+1. merge index for global sort table
