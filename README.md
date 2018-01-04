@@ -4,9 +4,16 @@
 
 | Priority level | Feature                                  |
 | -------------- | ---------------------------------------- |
-| High           | S3 Table, Data exchange between S3 and HDFS, Advisor |
+| High           | Java API, S3 Table, Data exchange between S3 and HDFS, Advisor |
 | Median         | Datamap to accelerate S3 table, Different kind of Datamap, Segment Status |
 | Low            | Others                                   |
+
+## Java API
+
+1. API to write single carbon file
+2. API to construct carbon table path
+3. API to read single carbon file
+4. API to register files to carbon table
 
 ## S3 table
 
@@ -90,6 +97,7 @@ DMPROPERTIES ('index_column'='c2')
 2. Implement a RPC based distributed graph compute framework
 3. Support prefetch of data to leverage the advantage of carbongraph's format
 4. Integrate CarbonData with Apache Tinkerpop as a [**TinkerPop-enabled data system provider**](http://tinkerpop.apache.org/providers.html). Expose Gremlin language to user as counterpart of SQL in data warehouse domain.
+5. Provide Graph SQL extension like [**Azure SQL**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/20/graph-data-processing-with-sql-server-2017)
 
 ## Segment Status
 
@@ -114,6 +122,14 @@ Since carbon has pre-agg now, many query can transform group by into point query
 2. Integrate with flink
 3. Integrate with kafka-connect
 
+## UDF for index column
+
+1. Support MATCH filter UDF push down
+   1. vector feature matching
+   2. lucene index matching
+
 ## Misc
 
 1. merge index for global sort table
+2. Support timestamp64 datatype for column that stores millisecond level timestamp
+3. Make tempCSV default value as 'false' for DataframeWriter
