@@ -8,12 +8,20 @@
 | Median         | Datamap to accelerate S3 table, Different kind of Datamap, Segment Status |
 | Low            | Others                                   |
 
-## Java API
+## CarbonStore
 
-1. API to write single carbon file
-2. API to construct carbon table path
-3. API to read single carbon file
-4. API to register files to carbon table
+1. Separate file format and segment
+2. Support using Parquet/ORC in CarbonStore
+3. Support selected features for Parquet/ORC, like pre-agg table
+4. Support external segment with specified path, file format
+5. Support implementing static partition using segment. User can use ALTER TABLE ADD PARTITION to add existing files to a partition (segment)
+
+## CarbonFile Java API
+
+1. API to write single carbon file in CarbonTable
+2. API to write single carbon file in CarbonFile
+3. API for create schema, table, and segment
+4. API to read single carbon file
 
 ## S3 table
 
@@ -114,7 +122,9 @@ Since carbon has pre-agg now, many query can transform group by into point query
 ## Timeseries Table
 
 1. Support data retention policy, so that old data is automatically deleted
-2. Support pre-aggregate table loading in rollup manner to improve loading speed, like rollup to month table based on day table instead of fact table
+2. In memory segment
+3. Streaming pre-aggregate
+4. Support pre-aggregate table loading in rollup manner to improve loading speed, like rollup to month table based on day table instead of fact table
 
 ## Streaming Table
 
@@ -133,3 +143,11 @@ Since carbon has pre-agg now, many query can transform group by into point query
 1. merge index for global sort table
 2. Support timestamp64 datatype for column that stores millisecond level timestamp
 3. Make tempCSV default value as 'false' for DataframeWriter
+
+
+
+## Cloud
+
+1. Need to support data temperature for S3, HDFS. CarbonStore automatically managed them according to the segment time range
+2. Support segment time range, it will be used for data retention, prunner, data temperature
+3. ​
