@@ -121,7 +121,7 @@ Since carbon has pre-agg now, many query can transform group by into point query
 
 ## Timeseries Table
 
-1. Support data retention policy, so that old data is automatically deleted
+1. Support data temperature on cloud for S3, HDFS. CarbonStore automatically managed them according to the segment time range. Support data retention policy, so that old data is automatically spill to cooler storage, like 1 month in HDFS, others in S3.
 2. In memory segment
 3. Streaming pre-aggregate
 4. Support pre-aggregate table loading in rollup manner to improve loading speed, like rollup to month table based on day table instead of fact table
@@ -138,16 +138,14 @@ Since carbon has pre-agg now, many query can transform group by into point query
    1. vector feature matching
    2. lucene index matching
 
+## AI integration
+
+1. Support feature vector in carbon/spark integration, as separate data file or datamap
+2. Support similar functionality for DL/Graph
+
 ## Misc
 
 1. merge index for global sort table
 2. Support timestamp64 datatype for column that stores millisecond level timestamp
 3. Make tempCSV default value as 'false' for DataframeWriter
 
-
-
-## Cloud
-
-1. Need to support data temperature for S3, HDFS. CarbonStore automatically managed them according to the segment time range
-2. Support segment time range, it will be used for data retention, prunner, data temperature
-3. ​
