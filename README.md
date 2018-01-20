@@ -1,10 +1,8 @@
 # This document collects requirements for Apache CarbonData
 
-Hit Count:
+Hit Count:[![HitCount](http://hits.dwyl.io/jackylk/jackylk/carbon-requested-feature.svg)](http://hits.dwyl.io/jackylk/jackylk/carbon-requested-feature)
 
-```
-[![HitCount](http://hits.dwyl.io/jackylk/jackylk/carbon-requested-feature.svg)](http://hits.dwyl.io/jackylk/jackylk/carbon-requested-feature)
-```
+
 
 | Priority level | Feature                                  |
 | -------------- | ---------------------------------------- |
