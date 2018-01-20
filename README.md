@@ -1,6 +1,10 @@
 # This document collects requirements for Apache CarbonData
 
+Hit Count:
 
+```
+[![HitCount](http://hits.dwyl.io/jackylk/jackylk/carbon-requested-feature.svg)](http://hits.dwyl.io/jackylk/jackylk/carbon-requested-feature)
+```
 
 | Priority level | Feature                                  |
 | -------------- | ---------------------------------------- |
@@ -8,33 +12,27 @@
 | Median         | Datamap to accelerate S3 table, Different kind of Datamap, Segment Status |
 | Low            | Others                                   |
 
-## CarbonStore
+## Improving usability
 
-1. Separate file format and segment
-2. Support using Parquet/ORC in CarbonStore
-3. Support selected features for Parquet/ORC, like pre-agg table
-4. Support external segment with specified path, file format
-5. Support implementing static partition using segment. User can use ALTER TABLE ADD PARTITION to add existing files to a partition (segment)
+1. Advisor for SORT_COLUMNS
+2. Advisor for pre-aggregate table
 
-## CarbonFile Java API
+## Typical Carbon Usage on Cloud
 
-1. API to write single carbon file in CarbonTable
-2. API to write single carbon file in CarbonFile
-3. API for create schema, table, and segment
-4. API to read single carbon file
+1. Support CarbonTable on S3
+2. Support loading to local CarbonTable from CSV on S3
+3. Support DataMap on local HDFS
+4. Support Java API to write and read CarbonTable/CarbonFile on S3
+5. Support adding external segment
+   - Support external segment with specified path, file format, partition value
+   - Support implementing static partition using segment. User can use ALTER TABLE ADD PARTITION to add existing files to a partition (segment)
 
-## S3 table
+## Support non-carbonfile in Carbon
 
-1. support basic table on S3: store carbondata files and metadata on S3, support loading, insert into, and query
-2. support pre-agg table on S3
-3. support partition table on S3
-4. support streaming table on S3
-5. support updatable table on S3
+1. Support pre-aggregate datamap for Parquet/ORC
+2. Support compaction for Parquet/ORC
 
-## Data exchange between S3 and HDFS
 
-1. support load data from S3 to carbon table in EC2
-2. support export data to S3 from carbon table in EC2
 
 ## Datamap to accelerate S3 table
 
@@ -148,4 +146,11 @@ Since carbon has pre-agg now, many query can transform group by into point query
 1. merge index for global sort table
 2. Support timestamp64 datatype for column that stores millisecond level timestamp
 3. Make tempCSV default value as 'false' for DataframeWriter
+
+
+
+## Image Content Search
+
+1. CREATE TABLE on pictures, sound, binary data, etc. CREATE DATAMAP on these binary to extract metadata and build secondary index, so that user can search these pictures by metadata like time, place, camera type, etc.
+2. CarbonStore should accept JPG picture as segment file format
 
